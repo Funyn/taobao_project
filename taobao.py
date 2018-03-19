@@ -157,6 +157,3 @@ class TaoBao:
             print('链接超时')
 
 
-
-# t = TaoBao(username='13538022816')
-# t.main()
