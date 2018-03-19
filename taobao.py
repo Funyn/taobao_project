@@ -144,7 +144,7 @@ class TaoBao:
         try:
             verified_url = self.login_by_st()
             # 此时的response将会是你的个人信息的页面,后续要访问的关于用户的url就携带self.cookies就可以正确访问了,在登陆的时候有时候会出现验证码,验证码部分我准备使用phantomJS解决
-            response = requests.get(verified_url,cookies=self.cookies)
+            response = requests.get(verified_url,cookies=self.cookies)  #这一步是检验是否成功登陆的,你只需要在访问的时候带你self.cookie就可以了,这条代码可以删除
 
             # ——————————————————————————
             # response1 = requests.get('https://buyertrade.taobao.com/trade/itemlist/list_bought_items.htm')
